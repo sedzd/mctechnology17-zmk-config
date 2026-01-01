@@ -13,6 +13,17 @@
 &led_strip { chain-length = <27>; };
 
 / {
+    behaviors {
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_SHIFT";
+            bindings = <&sk RSHFT>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
