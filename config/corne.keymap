@@ -7,4 +7,4 @@
 #include <dt-bindings/led/led.h>
 &led_strip { chain-length = <27>; };
 
-#include "../knucklehead/base.dtsi"
+#include "knucklehead/base.dtsi"
