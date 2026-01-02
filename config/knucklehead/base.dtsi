@@ -6,9 +6,9 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Layers
-#define L1 0
-#define L2 1
-#define Fn 2
+#define BAS 0
+#define LOW 1
+#define RAI 2
 
 // Meh key
 #define MEH LS(LC(LALT))
@@ -32,12 +32,12 @@
 #include "combos.dtsi"
 
 // Alpha layer: uncomment desired, comment the others
-// #include "L1_colemak-dh.dtsi"
-// #include "L1_colemak.dtsi"
-// #include "L1_dvorak.dtsi"
-#include "L1_qwerty.dtsi"
+// #include "BAS_colemak-dh.dtsi"
+// #include "BAS_colemak.dtsi"
+// #include "BAS_dvorak.dtsi"
+#include "BAS_qwerty.dtsi"
 
 // Other layers
-#include "L2.dtsi"
-#include "Fn.dtsi"
+#include "LOW.dtsi"
+#include "RAI.dtsi"
 

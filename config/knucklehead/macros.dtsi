@@ -9,7 +9,7 @@
         2. Modifier to press while layer is active
 
       Example:
-        `&lm L1 LSHIFT`
+        `&lm BAS LSHIFT`
      */
     /omit-if-no-ref/ lm: lm {
       wait-ms = <0>;
@@ -35,7 +35,7 @@
         1. Layer to switch to
 
       Example:
-        `&csl L1`
+        `&csl BAS`
      */
     /omit-if-no-ref/ csl: clear_sl {
       wait-ms = <0>;
@@ -60,7 +60,7 @@
         1. Layer to switch to
 
       Example:
-        `&cmo L1`
+        `&cmo BAS`
      */
     /omit-if-no-ref/ cmo: clear_mo {
       wait-ms = <0>;

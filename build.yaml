@@ -163,6 +163,7 @@ include:
     snippet: rgb-config studio-rpc-usb-uart
   - board: puchi_ble_v1
     shield: corne_right nice_oled
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne_Oled_RGB\"
     snippet: rgb-config
     artifact-name: puchi_corne_right_oled_rgb
     ### Pro Micro END ###
