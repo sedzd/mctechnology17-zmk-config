@@ -92,40 +92,37 @@ To switch from nice!view to OLED, modify the shield overlays in `boards/shields/
 
 You can customize the animations and widgets on your displays using configuration variables in `config/corne.conf`.
 
-### 🎥 Peripheral Animations
-Enable one of these vertical animations for the peripheral (usually right) half:
+### 🖥️ Display Type
+If you are using **nice!view (e-paper)** displays, ensure this flag is enabled to optimize the layout:
+```c
+CONFIG_NICE_EPAPER_ON=y
+```
+
+### 🎥 Peripheral Animations (Right Side)
+Enable one of these vertical animations for the peripheral half:
 
 | Variable | Animation |
 |----------|-----------|
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT` | Running Cat (Default) |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_GEM` | Spinning Gem |
+| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT` | Running Cat (Rainbow trail) |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_HEAD` | Rotating Head |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_POKEMON` | Random Pokemon |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_SPACEMAN` | Floating Spaceman |
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_WPM` | WPM Meter/Speedometer |
 
-### 🐈 Central Widgets (Master Side)
-Customize the master (usually left) display:
-
-| Variable | Description |
-|----------|-------------|
-| `CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT` | Show Bongo Cat |
-| `CONFIG_NICE_OLED_WIDGET_WPM_LUNA` | Show Luna the Dog |
-| `CONFIG_NICE_OLED_WIDGET_WPM_SPEEDOMETER` | Show WPM Gauge (Meter) |
-| `CONFIG_NICE_OLED_WIDGET_WPM_GRAPH` | Show WPM History Graph |
-
-### ⌨️ Modifiers Widget
-Show real-time status of your modifier keys (Ctrl, Shift, Alt, Gui):
+### 🐈 Central Widgets (Left Side)
+Customize the master display widgets and animations:
 
 | Variable | Description |
 |----------|-------------|
-| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS` | Enable the modifiers widget |
-| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_FIXED` | Use fixed icons for modifiers |
-| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_FIXED_SYMBOL` | Use symbols (⌃, ⇧, ⌥, ⌘) |
-| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_FIXED_LETTER` | Use letters (C, S, A, G) |
+| `CONFIG_NICE_OLED_WIDGET_LUNA` | Luna the Dog animation |
+| `CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT` | Bongo Cat animation |
+| `CONFIG_NICE_OLED_WIDGET_WPM_NUMBER` | Show WPM digits |
+| `CONFIG_NICE_OLED_WIDGET_WPM_GRAPH` | Show WPM History Graph (fluctuations) |
+| `CONFIG_NICE_OLED_WIDGET_STATUS` | Enable custom status bar (Battery/BT) |
+| `CONFIG_NICE_OLED_WIDGET_LAYER` | Enable custom layer indicator |
 
 > [!TIP]
-> To change an animation, add the desired variable to `config/corne.conf` set to `y` and ensure others are set to `n`. For example:
+> To switch animations, set your choice to `y` and others in the same group to `n`. 
 > ```c
 > CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_GEM=y
 > CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT=n
