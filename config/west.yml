@@ -11,6 +11,9 @@ manifest:
     # nice_oled - nice_epaper - dongle_display!view - oled Adapter
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    # urob modules (auto-layer, tri-state)
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -35,6 +38,14 @@ manifest:
     # oled Adapter
     - name: zmk-oled-adapter
       remote: mctechnology17
+      revision: main
+    # urob's zmk-auto-layer
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
+    # urob's zmk-tri-state
+    - name: zmk-tri-state
+      remote: urob
       revision: main
   self:
     path: config

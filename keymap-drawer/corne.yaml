@@ -1,33 +1,71 @@
-layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layout: {zmk_keyboard: corne}
 layers:
-  BAS: [↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-control$$', A, S, D, F, G, H, J, K, L, ;, '''', '$$mdi:apple-keyboard-shift$$',
-    Z, X, C, V, B, N, M, ',', ., /, Esc, '$$mdi:apple-keyboard-command$$', LOW, ␣, ⏎, RAI, '$$mdi:apple-keyboard-option$$']
-  LOW:
+  L1:
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - CANCEL
+  - {t: BACKSPACE, s: DELETE}
+  - A
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, h: LCMD}
+  - {t: G, h: Sft+Ctl+Alt}
+  - {t: H, h: Sft+Ctl+Alt}
+  - {t: J, h: LCMD}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - ''''
+  - ENTER
+  - '&csl 2'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - ;
+  - '&csl 2'
   - ↹
+  - {t: ␣, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '&num_dance', h: L2}
+  - {t: '&num_dance', h: L2}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky, s: Caps Word}
+  - '`'
+  L2:
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
   - '4'
   - '5'
+  - ⏮️
+  - Vol Down
+  - Vol Up
+  - ⏭️
+  - MUTE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - $$mdi:backspace-outline$$
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
-  - ←
-  - ↓
-  - ↑
-  - →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '7', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '8', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '9', h: LCMD}
+  - {t: '0', h: Sft+Ctl+Alt}
+  - {t: ←, h: Sft+Ctl+Alt}
+  - {t: ↓, h: LCMD}
+  - {t: ↑, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: →, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -39,52 +77,136 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-command$$
-  - {type: held}
-  - ␣
-  - ⏎
-  - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-option$$
-  RAI:
-  - ↹
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - AMPS
-  - KP MULTIPLY
-  - (
-  - )
-  - $$mdi:backspace-outline$$
-  - $$mdi:apple-keyboard-control$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
-  - '='
-  - '['
-  - ']'
-  - \
-  - '`'
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '&cmo 1', type: held}
+  - '&cmo 1'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Fn:
+  - OUT TOG
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
-  - $$mdi:apple-keyboard-command$$
-  - '&studio_unlock'
-  - ␣
-  - ⏎
-  - {t: '&studio_unlock', type: held}
-  - $$mdi:apple-keyboard-option$$
+  - POWER
+  - {t: Reset, h: Boot}
+  - F6
+  - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F9, h: LCMD}
+  - {t: F10, h: Sft+Ctl+Alt}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Reset, h: Boot}
+  - '&cmo 2'
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&cmo 2'
+  - BRI DN
+  - BRI UP
+  - '&cmo 1'
+  - '&cmo 1'
+  - CAPSLOCK
+  - {t: ▽, type: trans}
+combos:
+- p: [1, 13]
+  k: '!'
+  l: [L1, L2]
+- p: [2, 14]
+  k: '@'
+  l: [L1, L2]
+- p: [3, 15]
+  k: '#'
+  l: [L1, L2]
+- p: [4, 16]
+  k: $
+  l: [L1, L2]
+- p: [5, 17]
+  k: '%'
+  l: [L1, L2]
+- p: [13, 25]
+  k: ^
+  l: [L1, L2]
+- p: [14, 26]
+  k: AMPERSAND
+  l: [L1, L2]
+- p: [15, 27]
+  k: '*'
+  l: [L1, L2]
+- p: [16, 28]
+  k: (
+  l: [L1, L2]
+  draw_separate: true
+- p: [17, 29]
+  k: )
+  l: [L1, L2]
+  draw_separate: true
+- p: [7, 19]
+  k: '-'
+  l: [L1, L2, Fn]
+- p: [8, 20]
+  k: '='
+  l: [L1, L2, Fn]
+- p: [9, 21]
+  k: /
+  l: [L1, L2, Fn]
+- p: [6, 18]
+  k: Page Up
+  l: [L1, L2, Fn]
+- p: [18, 30]
+  k: Page Down
+  l: [L1, L2, Fn]
+- p: [19, 31]
+  k: '['
+  l: [L1, L2, Fn]
+  draw_separate: true
+- p: [20, 32]
+  k: ']'
+  l: [L1, L2, Fn]
+  draw_separate: true
+- p: [21, 33]
+  k: \
+  l: [L1, L2, Fn]
+- p: [1, 2, 3, 4]
+  k: BT CLR
+  l: [Fn]
+- p: [1, 13]
+  k: BT 1
+  l: [Fn]
+- p: [2, 14]
+  k: BT 2
+  l: [Fn]
+- p: [3, 15]
+  k: BT 3
+  l: [Fn]
+- p: [4, 16]
+  k: BT 4
+  l: [Fn]
+- p: [5, 17]
+  k: BT 5
+  l: [Fn]
+- p: [6, 7]
+  k: ⏯
+  l: [L1, L2, Fn]
+  a: right
