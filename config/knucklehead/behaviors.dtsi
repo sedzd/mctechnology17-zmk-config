@@ -88,7 +88,7 @@
     };
 
     /*
-    - tap: &sl L2
+    - tap: &sl LOW
     - tap x 2: &num_word
 
     From: https://github.com/urob/zmk-config/
