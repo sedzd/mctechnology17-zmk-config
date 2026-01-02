@@ -5,8 +5,8 @@
 # Email: mctechnology170318@gmail.com
 # GitHub: https://github.com/mctechnology17
 # Brief: Makefile for ZMK firmware with Docker
-# Shields: corne sofle splitkb_aurora_sofle
-# Boards: nice_nano_v2 puchi_ble_v1 seeeduino_xiao_ble
+# Shields: corne
+# Boards: nice_nano_v2
 # =========================================
 #                              ╔═╦═╦═╗
 #                       ╔════╗ ║║║║║╔╝
