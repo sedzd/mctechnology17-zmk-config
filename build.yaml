@@ -58,32 +58,36 @@ include:
     ### nice_view START ###
     # nice_nano_v2 + nice_epaper
   - board: nice_nano_v2
-    shield: corne_left nice_view_adapter nice_epaper
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nice_Corne_View\"
+    shield: corne_left nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nice_Corne_View\" -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     artifact-name: nice_corne_left_view
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_epaper
+    shield: corne_right nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     artifact-name: nice_corne_right_view
 
     # puchi_ble_v1 + nice_epaper
   - board: puchi_ble_v1
-    shield: corne_left nice_view_adapter nice_epaper
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Puchi_Corne_V\"
+    shield: corne_left nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Puchi_Corne_V\" -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     artifact-name: puchi_corne_left_view
     snippet: studio-rpc-usb-uart
   - board: puchi_ble_v1
-    shield: corne_right nice_view_adapter nice_view
+    shield: corne_right nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     artifact-name: puchi_corne_right_view
 
     # peripheral_left + nice_nano_v2 + nice_epaper
   - board: nice_nano_v2
-    shield: corne_left_peripheral nice_view_adapter nice_epaper
+    shield: corne_left_peripheral nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     artifact-name: nice_corne_left_peripheral_view
 
     # peripheral_left + puchi_ble_v1 + nice_epaper
   - board: puchi_ble_v1
-    shield: corne_left_peripheral nice_view_adapter nice_epaper
+    shield: corne_left_peripheral nice_view_adapter nice_view_gem
+    cmake-args: -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     artifact-name: puchi_corne_left_peripheral_view
     ### nice_view END ###
 
@@ -142,9 +146,9 @@ include:
     snippet: studio-rpc-usb-uart
     # snippet: zmk-usb-logging
   - board: puchi_ble_v1
-    shield: corne_dongle_pro_micro nice_view_adapter nice_epaper
+    shield: corne_dongle_pro_micro nice_view_adapter nice_view_gem
     #  -DCONFIG_ZMK_USB=y  -DCONFIG_ZMK_BLE=y
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Puchi_Dongle_V\"  -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Puchi_Dongle_V\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_NICE_VIEW_GEM_ANIMATION=y
     snippet: studio-rpc-usb-uart
     artifact-name: puchi_corne_dongle_view
     # snippet: zmk-usb-logging
