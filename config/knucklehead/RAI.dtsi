@@ -17,7 +17,7 @@
     &rst_boot 0 0   &kp F6          &hrml LCTRL F7  &hrml LALT F8   &hrml LCMD F9   &hrml MEH F10       &trans          &trans          &trans          &trans          &trans          &rst_boot 0 0
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │24             │25             │26             │27             │28             │29             │   │30             │31             │32             │33             │34             │35             │
-    &cmo RAI         &kp F11         &kp F12         &kp F13         &kp F14         &kp F15             &trans          &trans          &trans          &trans          &trans          &cmo RAI
+    &cmo RAI         &kp F11         &kp LS(LCTRL)   &kp LS(LALT)    &kp LS(LCMD)    &trans              &trans          &kp LS(LCMD)    &kp LS(LALT)    &kp LS(LCTRL)   &trans          &cmo RAI
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │   │39             │40             │41             │
                                                     &kp C_BRI_DN    &kp C_BRI_UP    &cmo LOW             &cmo LOW         &kp CAPSLOCK    &trans
