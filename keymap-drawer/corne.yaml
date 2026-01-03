@@ -18,30 +18,30 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: G, h: '$$mdi:triangle$$'}
-  - {t: H, h: '$$mdi:triangle$$'}
+  - {t: G, h: ▲}
+  - {t: H, h: ▲}
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&csl 2'
+  - {t: RAI, h: '$$mdi:close-box$$'}
   - Z
-  - {t: X, h: 'Sft+$$mdi:apple-keyboard-control$$'}
-  - {t: C, h: 'Sft+$$mdi:apple-keyboard-option$$'}
-  - {t: V, h: 'Sft+$$mdi:apple-keyboard-command$$'}
+  - {t: X, h: ⌃+⇧}
+  - {t: C, h: ⌥+⇧}
+  - {t: V, h: ⌘+⇧}
   - B
   - N
-  - {t: M, h: 'Sft+$$mdi:apple-keyboard-command$$'}
-  - {t: ',', h: 'Sft+$$mdi:apple-keyboard-option$$', s: <}
-  - {t: ., h: 'Sft+$$mdi:apple-keyboard-control$$', s: '>'}
+  - {t: M, h: ⌘+⇧}
+  - {t: ',', h: ⌥+⇧, s: <}
+  - {t: ., h: ⌃+⇧, s: '>'}
   - {t: ;, s: ':'}
-  - '&csl 2'
+  - {t: RAI, h: '$$mdi:close-box$$'}
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '&num_dance', h: LOW}
-  - {t: '&num_dance', h: LOW}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: LOW, h: '$$mdi:gesture-tap-hold$$', s: 🆆}
+  - {t: LOW, h: '$$mdi:gesture-tap-hold$$', s: 🆆}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: 🆆}
   - {t: '`', s: '~'}
   LOW:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -61,8 +61,8 @@ layers:
   - {t: '7', h: '$$mdi:apple-keyboard-control$$', s: '&'}
   - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
   - {t: '9', h: '$$mdi:apple-keyboard-command$$', s: (}
-  - {t: '0', h: '$$mdi:triangle$$', s: )}
-  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:triangle$$'}
+  - {t: '0', h: ▲, s: )}
+  - {t: '$$mdi:arrow-left-bold$$', h: ▲}
   - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:apple-keyboard-control$$'}
@@ -70,20 +70,20 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Sft+$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: Meh+LGUI, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: Meh+LGUI, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌃+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌥+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌘+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ✦, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ✦, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌘+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌥+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌃+⇧, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&cmo 1', type: held}
-  - {t: '&cmo 1', type: held alternate}
+  - {t: '$$mdi:close-box$$', h: LOW}
+  - {t: '$$mdi:close-box$$', h: LOW}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   RAI:
@@ -104,29 +104,29 @@ layers:
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F9, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: F10, h: '$$mdi:triangle$$'}
+  - {t: F10, h: ▲}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
-  - '&cmo 2'
+  - {t: '$$mdi:close-box$$', h: RAI}
   - F11
-  - {t: 'Sft+$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: Meh+LGUI, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: Meh+LGUI, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: 'Sft+$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌃+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌥+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌘+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ✦, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ✦, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌘+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌥+⇧, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ⌃+⇧, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&cmo 2'
+  - {t: '$$mdi:close-box$$', h: RAI}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
-  - '&cmo 1'
-  - '&cmo 1'
+  - {t: '$$mdi:close-box$$', h: LOW}
+  - {t: '$$mdi:close-box$$', h: LOW}
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
