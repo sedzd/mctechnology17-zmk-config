@@ -68,9 +68,28 @@ ZMK firmware configuration for the **Corne** split keyboard with **nice!nano v2*
 
 ## Keymap
 
-[![keymap-drawer-corne](keymap-drawer/corne.svg)](https://www.youtube.com/c/mctechnology17)
+[![Build ZMK firmware](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/build.yml) [![Draw keymap](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/draw.yml/badge.svg)](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/draw.yml)
 
-> **Note**: This SVG is auto-generated when you modify `config/corne.keymap` via the keymap editor.
+<img src="keymap-drawer/corne.svg" alt="Corne keymap layout graphical representation" width="100%" />
+
+> Drawn with [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
+
+## Legend
+
+| Symbol | Key Name                                            | Symbol | Key Name                                                  |
+| :----: | --------------------------------------------------- | :----: | --------------------------------------------------------- |
+|   🆆    | [Smart 🆆ord behavior](#smart-🆆ord-behaviors)        |   🆇    | [E🆇it smart 🆆ord behavior](#e🆇iting-smart-🆆ord-behaviors) |
+|   ⌃    | Control                                             |   ⇥    | Tab                                                       |
+|   ⌥    | Option                                              |   ␣    | Space                                                     |
+|   ⌘    | Command                                             |   ⇡    | Page Up                                                   |
+|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                 |   ⇣    | Page Down                                                 |
+|   ✦    | Hyper (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⌘&nbsp;+&nbsp;⇧) |   ⛭    | Brightness Up                                             |
+|   ⇧    | Shift                                               |   ⛯    | Brightness Down                                           |
+|   ⇪    | Caps Lock                                           |   ⟲    | Firmware reset (hold: bootloader mode)                    |
+|   ⌫    | Backspace                                           |        |                                                           |
+|   ⌦    | Delete                                              |  `L1`  | Layer 1                                                   |
+|   ⏎    | Return                                              |  `L2`  | Layer 2                                                   |
+|   ⏻    | Power                                               |  `Fn`  | Function Layer                                            |
 
 ---
 
