@@ -24,5 +24,6 @@ jobs:
       keymap_patterns: "config/corne.keymap" # path to the keymaps to parse
       config_path: "keymap-drawer/config.yaml" # config file, ignored if it doesn't exist
       output_folder: "keymap-drawer" # path to save produced SVGs in the existing folder
+      extra_keymap_yaml: "corne:'keymap-drawer/combos.yaml'"
       commit_message: "chore(draw): keymap"
       fail_on_error: true
