@@ -84,6 +84,9 @@
 <svg id="mdi:skip-previous">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-skip-previous" viewBox="0 0 24 24"><path d="M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z" /></svg>
 </svg>
+<svg id="mdi:star-four-points">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-star-four-points" viewBox="0 0 24 24"><path d="M12,1L9,9L1,12L9,15L12,23L15,15L23,12L15,9L12,1Z" /></svg>
+</svg>
 <svg id="mdi:toggle-switch">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-toggle-switch" viewBox="0 0 24 24"><path d="M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M17,15A3,3 0 0,1 14,12A3,3 0 0,1 17,9A3,3 0 0,1 20,12A3,3 0 0,1 17,15Z" /></svg>
 </svg>
@@ -783,6 +786,14 @@ path.combo {
 <rect rx="4" ry="4" x="785" y="40" width="30" height="30" class="combo"/>
 <use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="789" y="44" height="22" width="22.0" class="combo tap glyph mdi:play-pause"/>
 </g>
+<g class="combo combopos-19">
+<rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-20">
+<rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
 </g>
 </g>
 <g transform="translate(0, 392)" class="layer-LOW">
@@ -1072,6 +1083,14 @@ path.combo {
 <rect rx="4" ry="4" x="785" y="40" width="30" height="30" class="combo"/>
 <use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="789" y="44" height="22" width="22.0" class="combo tap glyph mdi:play-pause"/>
 </g>
+<g class="combo combopos-19">
+<rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-20">
+<rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
 </g>
 </g>
 <g transform="translate(0, 785)" class="layer-RAI">
@@ -1347,6 +1366,14 @@ path.combo {
 <g class="combo combopos-14">
 <rect rx="4" ry="4" x="785" y="40" width="30" height="30" class="combo"/>
 <use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="789" y="44" height="22" width="22.0" class="combo tap glyph mdi:play-pause"/>
+</g>
+<g class="combo combopos-15">
+<rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-16">
+<rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
 </g>
 </g>
