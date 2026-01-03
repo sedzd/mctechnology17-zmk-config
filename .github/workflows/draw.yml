@@ -6,6 +6,7 @@ on:
       - "config/corne.keymap"
       - "config/knucklehead/*.dtsi"
       - "keymap-drawer/config.yaml"
+      - "keymap-drawer/combos.yaml"
       - ".github/workflows/draw.yml"
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
