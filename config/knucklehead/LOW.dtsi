@@ -17,7 +17,7 @@
     &trans          &kp N6          &hrml LCTRL N7  &hrml LALT N8   &hrml LCMD N9   &hrml MEH N0        &hrmr MEH LEFT  &hrmr LCMD DOWN &hrmr LALT UP   &hrmr LCTRL RIGHT&trans         &trans
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │24             │25             │26             │27             │28             │29             │   │30             │31             │32             │33             │34             │35             │
-    &trans          &trans          &trans          &trans          &trans          &trans              &trans          &trans          &trans          &trans          &trans          &trans
+    &trans          &trans          &kp LS(LCTRL)   &kp LS(LALT)    &kp LS(LCMD)    &trans              &trans          &kp LS(LCMD)    &kp LS(LALT)    &kp LS(LCTRL)   &trans          &trans
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │   │39             │40             │41             │
                                                     &trans          &trans          &cmo LOW             &cmo LOW         &trans          &trans
