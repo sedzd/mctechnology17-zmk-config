@@ -17,7 +17,7 @@
     &bkspc_del      &kp A           &hrml LCTRL S   &hrml LALT D    &hrml LCMD F    &hrml MEH G         &hrmr MEH H     &hrmr LCMD J    &hrmr LALT K    &hrmr LCTRL L   &kp SQT         &kp ENTER
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 // │24             │25             │26             │27             │28             │29             │   │30             │31             │32             │33             │34             │35             │
-    &csl RAI         &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SEMICOLON   &csl RAI
+    &csl RAI         &kp Z           &hrml LS(LCTRL) X &hrml LS(LALT) C &hrml LS(LCMD) V &kp B               &kp N           &hrmr LS(LCMD) M &hrmr LS(LALT) COMMA &hrmr LS(LCTRL) DOT &kp SEMICOLON   &csl RAI
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │   │39             │40             │41             │
                                                     &kp TAB         &mt LSHFT SPACE &smart_num LOW 0     &smart_num LOW 0 &smart_shift    &kp GRAVE
