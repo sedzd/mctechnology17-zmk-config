@@ -87,9 +87,9 @@ ZMK firmware configuration for the **Corne** split keyboard with **nice!nano v2*
 |   ⇧    | Shift                                               |   ⛯    | Brightness Down                                           |
 |   ⇪    | Caps Lock                                           |   ⟲    | Firmware reset (hold: bootloader mode)                    |
 |   ⌫    | Backspace                                           |        |                                                           |
-|   ⌦    | Delete                                              |  `L1`  | Layer 1                                                   |
-|   ⏎    | Return                                              |  `L2`  | Layer 2                                                   |
-|   ⏻    | Power                                               |  `Fn`  | Function Layer                                            |
+|   ⌦    | Delete                                              | `BAS`  | Base Layer                                                |
+|   ⏎    | Return                                              | `LOW`  | Lower Layer                                               |
+|   ⏻    | Power                                               | `RAI`  | Raise Layer                                               |
 
 ---
 

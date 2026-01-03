@@ -7,24 +7,30 @@ parse_config:
 
   raw_binding_map:
     # Layers
-    "&smart_num L2 0":
-      shifted: $$mdi:alpha-w-box$$
-      tap: L2
+    "&smart_num LOW 0":
+      shifted: "🆆"
+      tap: LOW
       hold: $$mdi:gesture-tap-hold$$
-    "&csl Fn":
-      tap: Fn
+    "&csl RAI":
+      tap: RAI
       hold: $$mdi:close-box$$
-    "&csl L2":
-      tap: L2
+    "&csl LOW":
+      tap: LOW
       hold: $$mdi:close-box$$
-    "&cmo Fn":
+    "&cmo RAI":
       tap: $$mdi:close-box$$
-      hold: Fn
-    "&cmo L2":
+      hold: RAI
+    "&cmo LOW":
       tap: $$mdi:close-box$$
-      hold: L2
+      hold: LOW
+    "&num_dance":
+      tap: LOW
+      hold: "🆆"
 
     # Modifiers
+    "&smart_shift":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: "🆆"
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
@@ -223,7 +229,11 @@ parse_config:
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
-    LS(LC(LALT)): $$mdi:triangle$$ # Meh
+    "LS(LCTRL)": "⌃+⇧"
+    "LS(LALT)": "⌥+⇧"
+    "LS(LCMD)": "⌘+⇧"
+    "LS(LC(LA(LGUI)))": "✦"
+    "LS(LC(LALT))": "▲"
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
