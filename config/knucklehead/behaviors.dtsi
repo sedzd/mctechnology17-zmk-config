@@ -21,7 +21,7 @@
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
 // Adds arrows and shift to smart layer for more comfortable navigation/selection moves
 &num_word {
-  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LEFT RIGHT UP DOWN>;
+  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LSHFT LCTRL RCTRL LALT RALT LCMD RCMD LEFT RIGHT UP DOWN>;
 };
 
 / {
