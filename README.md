@@ -1,72 +1,16 @@
-# Corne Keyboard ZMK Config
+# Corne Keyboard ZMK Config (Simplified)
 
-[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
+This is a streamlined ZMK configuration for the **Corne** split keyboard, specifically optimized for **nice!nano v2** with **nice!view** (e-paper) displays.
 
-<div align="center">
-
-  [<img align="center" alt="MC Technology | YouTube" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/youtube.png" />][youtube]
-  [<img align="center" alt="MC Technology17 | Facebook" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/facebook.png" />][facebook]
-  [<img align="center" alt="MC Technology17 | Reddit" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/reddit.png" />][reddit]
-
-</div>
-<br>
-
-ZMK firmware configuration for the **Corne** split keyboard with **nice!nano v2** microcontroller.
-
-## Table of Contents
-
-- [Quick Start](#quick-start)
-- [Keymap](#keymap)
-- [Displays](#displays)
-- [Dongle Setup](#dongle-setup)
-- [ZMK Studio](#zmk-studio)
-- [Maintenance & Troubleshooting](#maintenance--troubleshooting)
-- [Local Development](#local-development)
-- [Module Integration](#module-integration)
-- [Resources](#resources)
+## 🛠️ Configuration
+- **Board:** nice!nano v2
+- **Shield:** Corne (left/right)
+- **Display:** nice!view (e-paper)
+- **Keymap:** Optimized smart layers via `knucklehead` base.
 
 ---
 
-## Features
-
-| Feature | Description |
-|---------|-------------|
-| **Wireless** | Bluetooth and USB-C connectivity |
-| **Battery** | Up to 1 week with 100mAh battery |
-| **Displays** | Supports nice!view (e-paper) and OLED |
-| **ZMK Studio** | Real-time keymap editing |
-| **Dongle** | Optional USB dongle mode |
-| **RGB** | Optional RGB underglow support |
-| **Multi-device** | Connect up to 5 devices |
-
----
-
-## Quick Start
-
-### Using ZMK Studio (Recommended)
-1. Fork this repository
-2. Go to **Actions** → download the firmware artifacts
-3. Flash `nice_corne_left_view.uf2` to left half
-4. Flash `nice_corne_right_view.uf2` to right half
-5. Connect to [ZMK Studio](https://zmk.studio/) to edit your keymap live!
-
-### Traditional Setup
-1. Fork this repository
-2. Modify your keymap using [keymap-editor](https://nickcoutsos.github.io/keymap-editor/)
-3. Commit changes → GitHub Actions builds firmware
-4. Download artifacts from Actions tab
-5. Flash `.uf2` files to each keyboard half
-
-### Flashing Firmware
-1. Connect the keyboard half via USB-C
-2. Double-tap the reset button (enters bootloader mode)
-3. Keyboard appears as a USB drive
-4. Drag and drop the `.uf2` file
-5. Repeat for the other half
-
----
-
-## Keymap
+## 🚀 Keymap
 
 [![Build ZMK firmware](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/build.yml) [![Draw keymap](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/draw.yml/badge.svg)](https://github.com/sedzd/mctechnology17-zmk-config/actions/workflows/draw.yml)
 
@@ -74,275 +18,66 @@ ZMK firmware configuration for the **Corne** split keyboard with **nice!nano v2*
 
 > Drawn with [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 
-## Legend
+---
 
-| Symbol | Key Name                                            | Symbol | Key Name                                                  |
-| :----: | --------------------------------------------------- | :----: | --------------------------------------------------------- |
-|   🆆    | [Smart 🆆ord behavior](#smart-🆆ord-behaviors)        |   🆇    | [E🆇it smart 🆆ord behavior](#e🆇iting-smart-🆆ord-behaviors) |
-|   ⌃    | Control                                             |   ⇥    | Tab                                                       |
-|   ⌥    | Option                                              |   ␣    | Space                                                     |
-|   ⌘    | Command                                             |   ⇡    | Page Up                                                   |
-|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                 |   ⇣    | Page Down                                                 |
-|   ✦    | Hyper (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⌘&nbsp;+&nbsp;⇧) |   ⛭    | Brightness Up                                             |
-|   ⇧    | Shift                                               |   ⛯    | Brightness Down                                           |
-|   ⇪    | Caps Lock                                           |   ⟲    | Firmware reset (hold: bootloader mode)                    |
-|   ⌫    | Backspace                                           |        |                                                           |
-|   ⌦    | Delete                                              | `BAS`  | Base Layer                                                |
-|   ⏎    | Return                                              | `LOW`  | Lower Layer                                               |
-|   ⏻    | Power                                               | `RAI`  | Raise Layer                                               |
+## 💾 Firmware Build
+
+The following firmware files are generated by GitHub Actions:
+
+- `nice_corne_left_view.uf2`: Left half
+- `nice_corne_right_view.uf2`: Right half
+- `nice_settings_reset.uf2`: Bluetooth/Bonding reset (flash to both halves if pairing fails)
 
 ---
 
-## Displays
-
-### nice!view (E-Paper) - Default
-- Ultra-low power consumption
-- 30Hz refresh rate
-- SSD1306 OLED replacement pinout
-
-### OLED Displays
-Supported sizes: 128x32, 128x64, 128x128
-
-To switch from nice!view to OLED, modify the shield overlays in `boards/shields/corne/`.
-
----
-
-## Animations & Customization
-
-You can customize the animations and widgets on your displays using configuration variables in `config/corne.conf`.
-
-### 🖥️ Display Type
-If you are using **nice!view (e-paper)** displays, ensure this flag is enabled to optimize the layout:
-```c
-CONFIG_NICE_EPAPER_ON=y
-```
-
-### 🎥 Peripheral Animations (Right Side)
-Enable one of these vertical animations for the peripheral half:
-
-| Variable | Animation |
-|----------|-----------|
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_GEM` | Spinning Gem |
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT` | Running Cat (Rainbow trail) |
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_HEAD` | Rotating Head |
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_POKEMON` | Random Pokemon |
-| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_SPACEMAN` | Floating Spaceman |
-
-### 🐈 Central Widgets (Left Side)
-Customize the master display widgets and animations:
-
-| Variable | Description |
-|----------|-------------|
-| `CONFIG_NICE_OLED_WIDGET_LUNA` | Luna the Dog animation |
-| `CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT` | Bongo Cat animation |
-| `CONFIG_NICE_OLED_WIDGET_WPM_NUMBER` | Show WPM digits |
-| `CONFIG_NICE_OLED_WIDGET_WPM_GRAPH` | Show WPM History Graph (fluctuations) |
-| `CONFIG_NICE_OLED_WIDGET_STATUS` | Enable custom status bar (Battery/BT) |
-| `CONFIG_NICE_OLED_WIDGET_LAYER` | Enable custom layer indicator |
-
-> [!TIP]
-> To switch animations, set your choice to `y` and others in the same group to `n`. 
-> ```c
-> CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_GEM=y
-> CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT=n
-> ```
-
----
-
-## Dongle Setup
-
-Use a separate nice!nano v2 as a USB dongle receiver:
-
-1. Flash `nice_corne_dongle_pro_micro.uf2` to the dongle
-2. Flash `nice_corne_left_peripheral_view.uf2` to left half
-3. Flash `nice_corne_right_view.uf2` to right half
-
-**Pro tip**: Add a bootloader combo to enter bootloader mode without physical access:
-
-```c
-// In your keymap's combos section
-combo_bootloader {
-    timeout-ms = <50>;
-    key-positions = <0 1 2>;  // First 3 keys on left
-    bindings = <&bootloader>;
-};
-```
-
----
-
-## ZMK Studio
-
-This config includes ZMK Studio support out of the box:
-
-1. Connect the master half (or dongle) via USB
-2. Open [zmk.studio](https://zmk.studio/)
-3. Edit your keymap in real-time!
-
-> **Note**: `CONFIG_ZMK_STUDIO_LOCKING=n` is set by default, so no unlock macro needed.
-
----
-
-## Maintenance & Troubleshooting
-
-### 🔧 Common Issues
-
-#### Halves Won't Connect
-1. Press reset button on both halves 10 times rapidly
-2. If still failing, flash `nice_settings_reset.uf2` to both halves
-3. Re-flash the actual firmware
-
-#### Keyboard Not Responding
-1. Check battery level
-2. Try connecting via USB
-3. Double-tap reset to verify bootloader works
-
-#### Bluetooth Issues
-- Clear existing pairings on your computer
-- Flash settings reset to both halves
-- Re-pair fresh
-
-### 🔋 Battery Tips
-- Disable RGB for maximum battery life
-- nice!view uses 1000x less power than OLED
-- Enable `CONFIG_ZMK_SLEEP=y` for auto-sleep
-
-### 📁 Key Files
-
-| File | Purpose |
-|------|---------|
-| `config/corne.keymap` | Your keymap layout |
-| `config/corne.conf` | Keyboard settings (sleep, BLE, etc.) |
-| `build.yaml` | GitHub Actions build configuration |
-| `boards/shields/corne/` | Shield definitions |
-
-### 🔄 Updating ZMK
-1. Update `config/west.yml` with newer ZMK revision
-2. Push to trigger rebuild
-3. Flash new firmware
-
-### 💾 Backup Your Config
-- Commit changes regularly to git
-- Your keymap is stored in `config/corne.keymap`
-- Settings in `config/corne.conf`
-
-### 🛠️ Useful Keymap Additions
-
-Add these to your keymap for easier maintenance:
-
-```c
-// Reset key - restarts firmware
-&sys_reset
-
-// Bootloader key - enters flash mode
-&bootloader
-
-// Bluetooth profile switching
-&bt BT_SEL 0  // Switch to device 0
-&bt BT_CLR    // Clear current profile
-```
-
----
-
-## Local Development
+## ⚙️ Local Development
 
 ### Prerequisites
 - [Docker](https://www.docker.com/products/docker-desktop/)
 
-### Build Commands
+### Using Makefile
+The repository includes a simplified `Makefile` for local builds:
+
 ```bash
-# Initialize ZMK codebase (urob's fork)
-make codebase_urob
+# Build left half
+make left
 
-# Build all Corne firmware
-make corne_urob
+# Build right half
+make right
 
-# Open shell in build environment
-make shell
+# Build settings reset
+make reset
 
-# Clean build artifacts
-make clean
+# Flash firmware (waits for NICENANO mount)
+make flash_left
+make flash_right
 ```
 
-### Repository Structure
+---
+
+## 📂 Repository Structure
+
 ```
-zmk-config/
+.
 ├── boards/
-│   ├── nice_nano_v2.overlay
-│   └── shields/corne/          # Corne shield files
+│   ├── nice_nano_v2.overlay    # Board overlay
+│   └── shields/corne/          # Corne shield definitions
 ├── config/
-│   ├── corne.conf              # Your settings
-│   ├── corne.keymap            # Your keymap
-│   └── west.yml                # ZMK module config
-├── firmware/                   # Pre-built .uf2 files
-├── keymap-drawer/              # Visual keymap SVG
-├── build.yaml                  # CI build config
-└── Makefile                    # Local build commands
+│   ├── corne.conf              # Keyboard settings (Bluetooth, Power, Studio)
+│   ├── corne.keymap            # Main keymap file
+│   └── knucklehead/            # Modular keymap layers (DTSI)
+├── firmware/                   # Pre-built firmware artifacts
+├── keymap-drawer/              # Keymap visualization (SVG/YAML)
+├── build.yaml                  # GitHub Actions build matrix
+└── Makefile                    # Local build automation
 ```
 
 ---
 
-## Module Integration
-
-### Modules Used
-- [nice_view_gem](https://github.com/M165437/nice-view-gem) - nice!view customization
-- [nice_oled](https://github.com/mctechnology17/zmk-nice-oled) - OLED widgets
-- [zmk-dongle-display](https://github.com/englmaxi/zmk-dongle-display) - Dongle display support
-
-### Using This Repo as a Module
-Add to your `config/west.yml`:
-
-```yaml
-manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
-  projects:
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
-    - name: zmk-config
-      remote: mctechnology17
-      revision: main
-  self:
-    path: config
-```
+## ✍️ Editor
+**SED**
 
 ---
 
-## Resources
-
-### Official Documentation
-- [ZMK Documentation](https://zmk.dev/docs/user-setup)
-- [ZMK Keycodes](https://zmk.dev/docs/codes)
-- [ZMK Discord](https://zmk.dev/community/discord/invite)
-
-### Tools
-- [ZMK Studio](https://zmk.studio/) - Real-time keymap editor
-- [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) - Visual keymap editor
-- [Keymap Drawer](https://keymap-drawer.streamlit.app/) - Generate keymap SVGs
-
-### Inspirations
-- [urob/zmk-config](https://github.com/urob/zmk-config)
-- [englmaxi/zmk-config](https://github.com/englmaxi/zmk-config)
-- [caksoylar/zmk-config](https://github.com/caksoylar/zmk-config)
-
----
-
-## Support
-
-If you find this useful:
-- ⭐ Star this repository
-- 📺 Subscribe on [YouTube][youtube]
-- ☕ [Sponsor me](https://github.com/sponsors/mctechnology17) or [PayPal](https://www.paypal.me/mctechnology17)
-
----
-
-> **Disclaimer**: Use at your own risk. I am not responsible for any damage.
-
-[github]: https://github.com/mctechnology17
-[youtube]: https://www.youtube.com/c/mctechnology17
-[facebook]: https://m.facebook.com/mctechnology17/
-[reddit]: https://www.reddit.com/user/mctechnology17
+> [!NOTE]
+> This configuration has been simplified to remove unused boards (Puchi, Xiao), RGB support, and dongle modes to ensure clean and fast builds.

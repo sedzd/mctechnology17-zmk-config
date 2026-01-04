@@ -2,13 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # dongle_display
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
     # nice_view_gem
     - name: m165437
       url-base: https://github.com/M165437
-    # nice_oled - nice_epaper - dongle_display!view - oled Adapter
+    # nice_oled - nice_epaper
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
     # urob modules (auto-layer, tri-state)
@@ -19,24 +16,12 @@ manifest:
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
-    # dongle_display
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: main
     # nice_view_gem
     - name: nice-view-gem
       remote: m165437
       revision: main
     # nice_oled - nice_epaper
     - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
-    # dongle_display!view
-    - name: zmk-dongle-display-view
-      remote: mctechnology17
-      revision: main
-    # oled Adapter
-    - name: zmk-oled-adapter
       remote: mctechnology17
       revision: main
     # urob's zmk-auto-layer
