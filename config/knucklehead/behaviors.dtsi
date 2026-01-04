@@ -21,7 +21,7 @@
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
 // Adds arrows and shift to smart layer for more comfortable navigation/selection moves
 &num_word {
-  continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LSHFT LCTRL RCTRL LALT RALT LCMD RCMD LEFT RIGHT UP DOWN>;
+  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL RSHFT LSHFT LCTRL RCTRL LALT RALT LCMD RCMD LEFT RIGHT UP DOWN>;
 };
 
 / {
@@ -96,14 +96,7 @@
     /omit-if-no-ref/ num_dance: num_dance {
       compatible = "zmk,behavior-tap-dance";
       tapping-term-ms = <TAPPING_TERM_MS>;
-      bindings = <&sl LOW>, <&tog LOW>;
-      #binding-cells = <0>;
-    };
-
-    /omit-if-no-ref/ rai_dance: rai_dance {
-      compatible = "zmk,behavior-tap-dance";
-      tapping-term-ms = <TAPPING_TERM_MS>;
-      bindings = <&sl RAI>, <&tog RAI>;
+      bindings = <&sl LOW>, <&num_word LOW>;
       #binding-cells = <0>;
     };
 
